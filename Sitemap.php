@@ -168,11 +168,13 @@ class Sitemap
 
         $isLocactionArray = is_array($location);
 
-        if (!$isLocactionArray && false === filter_var($location, FILTER_VALIDATE_URL)) {
-            throw new \InvalidArgumentException(
-                "The location must be a valid URL. You have specified: {$location}."
-            );
-        }
+        // invalid validator
+        //
+        // if (!$isLocactionArray && false === filter_var($location, FILTER_VALIDATE_URL)) {
+        //     throw new \InvalidArgumentException(
+        //         "The location must be a valid URL. You have specified: {$location}."
+        //     );
+        // }
 
         if($isLocactionArray) {
             foreach($location as $idx=>$item) {
